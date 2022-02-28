@@ -1,4 +1,4 @@
 # Matthew Coleman
-# Programming for Web Applications C202203
+Programming for Web Applications C202203
 
-# 01_Components - Components created for the application.
+01_Components - Components created for the application.
