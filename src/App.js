@@ -1,23 +1,23 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import AvatarIcon from './images/generic-avatar-1.jpeg';
+import MyAvatar from './components/MyAvatar';
+import { FaBeer } from 'react-icons/fa';
+import MyHeader from './components/MyHeader';
 
-class App extends Component() {
+class App extends Component {
   render() {
-
     return (
       <div className="App">
-        <p>testing</p>
-        <div>some stuff</div>
+        <MyAvatar AvatarIcon={AvatarIcon}/>
+        <MyHeader />
+        <div>
+          <h1>Icon Examples:</h1>
+          <p>
+            <FaBeer />
+          </p>
+        </div>
       </div>
     );
   }
 }
 export default App;
-/*function App() {
-  return (
-      <div className="App">
-        <p>testing</p>
-      </div>
-    );
-}
-
-export default App;*/
