@@ -1,6 +1,7 @@
 import React from 'react'
 import TangerineLogo from '../images/tangerinelogo.png'
-import { FaSearch, FaEnvelope, FaBell } from 'react-icons/fa'
+import { FaSearch, FaBell } from 'react-icons/fa'
+import { GiSettingsKnobs } from 'react-icons/gi'
 import MyIcons from './MyIcons'
 import ImageUrl from '../images/generic-avatar-1.jpeg'
 
@@ -16,8 +17,8 @@ const MyHeader = props => {
                 <span style={styles.inputIcon}><FaSearch/></span>
             </div>
             <div style={styles.right}>
-                <button style={styles.rightIcons}><FaEnvelope/></button>
                 <button style={styles.rightIcons}><FaBell/></button>
+                <button style={styles.rightIcons}><GiSettingsKnobs/></button>
                 <MyIcons IconImg={ImageUrl} ImgAlt='A generic avatar' />
             </div>
         </header>
@@ -53,7 +54,7 @@ const styles= {
         width: '40%',
     },
     inputwithIcon: {
-        fontSize: '15px',
+        fontSize: '1rem',
         border: 'none',
         borderRadius: '10px 0px 0px 10px',
         flex: 1,
