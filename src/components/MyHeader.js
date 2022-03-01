@@ -28,6 +28,8 @@ export default MyHeader
 
 const styles= {
     myHeader: {
+        position: 'fixed',
+        width: '100%',
         paddingLeft: '1%',
         paddingRight: '1%',
         backgroundColor: '#DD614A',

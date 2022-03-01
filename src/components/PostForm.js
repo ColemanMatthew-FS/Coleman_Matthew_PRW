@@ -30,6 +30,7 @@ const styles= {
         backgroundColor: 'white',
         color: '#3A405A',
         borderRadius: '2%',
+        boxShadow: '0 4px 10px 0',
     },
     input: {
         width: '90%',

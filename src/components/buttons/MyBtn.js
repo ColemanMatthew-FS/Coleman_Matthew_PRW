@@ -14,9 +14,9 @@ const styles= {
         fontWeight: 'bold',
         backgroundColor: '#3A405A',
         color: 'white',
-        padding: '1%',
+        padding: '7px',
         margin: '1%',
-        borderRadius: '10%',
+        borderRadius: '10px',
         border: 'none',
         cursor: 'pointer',
     }

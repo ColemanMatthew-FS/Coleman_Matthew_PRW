@@ -1,13 +1,12 @@
 import React from 'react'
-import MyBtn from './buttons/MyBtn'
 
 const MyAd = props => {
     return (
         <article style={styles.myArticle}>
-            <img src={props.imgSrc} alt={props.imgAlt}/>
-            <h2>{props.adHeader}</h2>
-            <p>{props.adInfo}</p>
-            <MyBtn btnText={'Buy Now!'}/>
+            <img src={props.ImgSrc} alt={props.ImgAlt} style={styles.image}/>
+            <h2>{props.AdHeader}</h2>
+            <p>{props.AdInfo}</p>
+            <button style={styles.button}>Buy now!</button>
         </article>
     )
 }
@@ -18,10 +17,21 @@ const styles= {
         display: 'flex',
         flexDirection: 'column',
         width: '250px',
+        margin: '3%',
         padding: '1%',
         backgroundColor: '#3A405A',
         color: 'white',
-        justifyContent: 'space-between',
         borderRadius: '5px',
+        textAlign: 'center',
     },
+    button: {
+        fontWeight: 'bold',
+        backgroundColor: 'white',
+        color: '#3A405A',
+        padding: '1%',
+        margin: '1%',
+        borderRadius: '10px',
+        border: 'none',
+        cursor: 'pointer',
+    }
 }

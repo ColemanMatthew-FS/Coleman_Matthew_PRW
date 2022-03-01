@@ -16,7 +16,7 @@ const styles= {
         color: '#3A405A',
         padding: '1%',
         margin: '1%',
-        borderRadius: '10%',
+        borderRadius: '10px',
         border: '1px solid #3A405A',
         cursor: 'pointer',
     }
