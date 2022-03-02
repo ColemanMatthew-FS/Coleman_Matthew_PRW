@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import MyHeader from './components/MyHeader';
-import MyBtn from './components/buttons/MyBtn';
-import MyBtnInactive from './components/buttons/MyBtnInactive';
 import PostForm from './components/PostForm';
 import MyAd from './components/MyAd';
 import AppleCider from './images/applecider.jpeg';
@@ -18,7 +16,7 @@ class App extends Component {
           <Nav />
           <div style={styles.main}>
             <PostForm />
-            <Post PostTitle={'Howdy!'} PostText={'I\'m new, it\'s nice to meet everyone!'} />
+            <Post PostTitle={'Howdy!'} PostText={'I\'m new, it\'s nice to meet everyone! I can\t wait to get to know you all over the course of our studies together! I\'m looking forward to seeing this app grow.'} />
           </div>
           <aside style={styles.cardContainer}>
             <MyAd ImgSrc={AppleCider} ImgAlt={'A glass of apple cider'} AdHeader={'Momma\'s Apple Cider'} AdInfo={'Fresh-squeezed, not from concentrate'}/>

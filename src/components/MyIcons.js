@@ -1,6 +1,5 @@
 import React from 'react'
 
-//dummy component
 const MyAvatar = props => {
     return (
         <img src={props.IconImg} alt={props.ImgAlt} style={styles.myIcon} />
