@@ -11,13 +11,18 @@ class App extends Component {
   render() {
     return (
       <div className="App" style={styles.container}>
+        {/* Header is dropped in here */}
         <MyHeader />
+        {/* Flex column layout */}
         <div style={styles.subContainer}>
+          {/* The nav component on the left goes here */}
           <Nav />
+          {/* The post form and post go in this div */}
           <div style={styles.main}>
             <PostForm />
             <Post PostTitle={'Howdy!'} PostText={'I\'m new, it\'s nice to meet everyone! I can\t wait to get to know you all over the course of our studies together! I\'m looking forward to seeing this app grow.'} />
           </div>
+          {/* The aside for the ad cards is in here */}
           <aside style={styles.cardContainer}>
             <MyAd ImgSrc={AppleCider} ImgAlt={'A glass of apple cider'} AdHeader={'Momma\'s Apple Cider'} AdInfo={'Fresh-squeezed, not from concentrate'}/>
             <MyAd ImgSrc={Bedding} ImgAlt={'Fresh sheets'} AdHeader={'Grab a good night\'s rest'} AdInfo={'Satin, down, wool, your choice'}/>

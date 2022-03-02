@@ -1,11 +1,12 @@
 import React from 'react'
 
-const MyAvatar = props => {
+//Generic icon
+const MyIcons = props => {
     return (
         <img src={props.IconImg} alt={props.ImgAlt} style={styles.myIcon} />
     )
 }
-export default MyAvatar
+export default MyIcons
 
 const styles= {
     myIcon: {

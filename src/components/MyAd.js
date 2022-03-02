@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Generic advertisement with props for the image, header, and text
 const MyAd = props => {
     return (
         <article style={styles.myArticle}>

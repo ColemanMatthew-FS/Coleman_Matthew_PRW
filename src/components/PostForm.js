@@ -3,6 +3,7 @@ import MyBtn from './buttons/MyBtn'
 import MyIcons from './MyIcons'
 import ImageUrl from '../images/generic-avatar-1.jpeg'
 
+//Form for adding a post
 const PostForm = props => {
     return (
         <form style={styles.myForm} onSubmit={props.submit}>

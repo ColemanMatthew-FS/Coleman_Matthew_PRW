@@ -7,6 +7,7 @@ import ImageUrl from '../images/generic-avatar-1.jpeg'
 
 const MyHeader = props => {
     return (
+        //Header consists of three main divs, one to the left, one in the middle, and one on the right
         <header style={styles.myHeader}>
             <div style={styles.left}>
                 <img src={TangerineLogo} alt={"Logo for the app"} style={styles.tangerineLogo} />

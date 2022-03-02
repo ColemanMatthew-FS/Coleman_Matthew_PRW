@@ -4,6 +4,7 @@ import MyIcons from './MyIcons'
 import ImageUrl from '../images/generic-avatar-1.jpeg'
 import { FaPen, FaTrash } from 'react-icons/fa'
 
+//Post component featuring an avatar, title, and description as well as edit and delete buttons
 const Post = props => {
     return (
         <article style={styles.postArticle}>
@@ -15,6 +16,7 @@ const Post = props => {
                 <p>{props.PostText}</p>
             </div>
             <div style={styles.postButtons}>
+                {/* edit button */}
                 <MyBtn btnText={<FaPen />}/>
                 <MyBtn btnText={<FaTrash />}/>
             </div>

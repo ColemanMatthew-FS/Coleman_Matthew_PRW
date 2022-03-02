@@ -1,5 +1,6 @@
 import React from 'react'
 
+//This is for the nav options on the left
 const Nav = props => {
     return (
         <nav style={styles.article}>
