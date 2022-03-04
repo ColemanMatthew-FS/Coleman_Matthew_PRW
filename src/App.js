@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import MyHeader from './components/MyHeader';
-import PostForm from './components/PostForm';
-import MyAd from './components/MyAd';
-import AppleCider from './images/applecider.jpeg';
-import Bedding from './images/sheets.jpeg';
-import Nav from './components/Nav';
-import Post from './components/Post';
+import React, { Component } from 'react'
+import MyHeader from './components/MyHeader'
+import PostForm from './components/PostForm'
+import MyAd from './components/MyAd'
+import AppleCider from './images/applecider.jpeg'
+import Bedding from './images/sheets.jpeg'
+import Nav from './components/Nav'
+import Post from './components/Post'
 
 class App extends Component {
   render() {
