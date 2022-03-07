@@ -6,14 +6,24 @@ import ImageUrl from '../images/generic-avatar-1.jpeg'
 //Form for adding a post
 const PostForm = props => {
     return (
-        <form style={styles.myForm} onSubmit={props.submit}>
+        <form style={styles.myForm} onSubmit={props.addItem}>
             <div style={styles.inputContainer}>
                 <MyIcons IconImg={ImageUrl} ImgAlt='A generic avatar' />
-                <input style={styles.input} placeholder="Title your post"/>
+                <input
+                name='pTitle'
+                value={props.gTitle}
+                style={styles.input}
+                onChange={props.getInput}
+                placeholder="Title your post"/>
             </div>
             <div style={styles.inputContainer}>
-                <textarea style={styles.textArea} placeholder="What's on your mind?"/>
-                <MyBtn btnText={'Submit Post'}/>
+                <textarea
+                name='pDesc'
+                vale={props.pDesc}
+                style={styles.textArea}
+                onChange={props.getInput}
+                placeholder="What's on your mind?"/>
+                <MyBtn {...props}/>
             </div>
         </form>
     )

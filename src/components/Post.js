@@ -1,24 +1,26 @@
 import React from 'react'
 import MyBtn from './buttons/MyBtn'
 import MyIcons from './MyIcons'
-import ImageUrl from '../images/generic-avatar-1.jpeg'
 import { FaPen, FaTrash } from 'react-icons/fa'
 
 //Post component featuring an avatar, title, and description as well as edit and delete buttons
 const Post = props => {
+    //all of the props are prefixed with props.val
+    //this is because the props passed in from app.js are objects with multiple properties
     return (
         <article style={styles.postArticle}>
             <div style={styles.titleContainer}>
-                <MyIcons IconImg={ImageUrl} ImgAlt='A generic avatar' />
-                <h2 style={styles.title}>{props.PostTitle}</h2>
+                <MyIcons IconImg={props.val.pImg} ImgAlt={props.val.pAlt} />
+                <h2 style={styles.title}>{props.val.pTitle}</h2>
             </div>
             <div style={styles.textContainer}>
-                <p>{props.PostText}</p>
+                <p>{props.val.pDesc}</p>
             </div>
             <div style={styles.postButtons}>
                 {/* edit button */}
                 <MyBtn btnText={<FaPen />}/>
-                <MyBtn btnText={<FaTrash />}/>
+                {/* delete button */}
+                <MyBtn btnText={<FaTrash />} onClick={props.delMe} />
             </div>
         </article>
     )
