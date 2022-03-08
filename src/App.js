@@ -53,6 +53,8 @@ componentDidMount() {
     e.target.reset()
   }
 
+  //Uses the filter method to filter out any posts with a matching index number
+  //This prevents mutating the state
   removeItem = (key) => {
     console.log(key)
     const newpList = this.state.pList.filter(post => this.state.pList.indexOf(post) !== key)
