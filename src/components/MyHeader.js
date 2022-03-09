@@ -5,7 +5,7 @@ import { GiSettingsKnobs } from 'react-icons/gi'
 import MyIcons from './MyIcons'
 import ImageUrl from '../images/generic-avatar-1.jpeg'
 
-const MyHeader = props => {
+const MyHeader = () => {
     return (
         //Header consists of three main divs, one to the left, one in the middle, and one on the right
         <header style={styles.myHeader}>
