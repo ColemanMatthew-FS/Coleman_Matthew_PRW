@@ -25,7 +25,8 @@ class App extends Component {
     color: '#3A405A',
   }
 
-componentDidMount() {
+//Changes the color of part of the page's background
+  componentDidMount() {
   setTimeout(() => {
     this.setState({color: 'transparent'})
   }, 5000)
@@ -58,7 +59,6 @@ componentDidMount() {
   removeItem = (key) => {
     console.log(key)
     const newpList = this.state.pList.filter(post => this.state.pList.indexOf(post) !== key)
-    this.state.pList.filter(post => this.state.pList.indexOf(post) !== key)
     this.setState({pList:newpList})
     console.log(newpList)
   }
