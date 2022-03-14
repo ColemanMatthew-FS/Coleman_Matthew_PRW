@@ -3,6 +3,11 @@ import {Routes, Route } from 'react-router-dom'
 import MyHeader from './components/MyHeader'
 import Nav from './components/Nav'
 import Dashboard from './pages/Dashboard'
+import ReportsDash from './pages/ReportsDash'
+import IncomeDash from './pages/IncomeDash'
+import SavingsDash from './pages/SavingsDash'
+import SpendingDash from './pages/SpendingDash'
+import SettingsDash from './pages/SettingsDash'
 
 function App() {
   
@@ -10,14 +15,17 @@ function App() {
     <div style={styles.container}>
       <MyHeader />
       <main style={styles.main}>
-        <aside>
-          <Nav />
-        </aside>
+        <Nav />
         
         <section style={styles.subContainer}>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="ReportsDash" element={<ReportsDash />} />
+            <Route path="IncomeDash" element={<IncomeDash />} />
+            <Route path="SavingsDash" element={<SavingsDash />} />
+            <Route path="SpendingDash" element={<SpendingDash />} />
+            <Route path="SettingsDash" element={<SettingsDash />} />
           </Routes>
         </section>  
       </main>
@@ -31,19 +39,18 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     background: '#CDCDCD',
-    height: '100%',
     fontSize: '.75rem',
     fontFamily: 'Source Sans Pro'
   },
   main: {
-    padding: '55px 25px 10px 25px',
+    padding: '55px 25px 10px 0px',
     width: '90%',
     display: 'flex',
     flexDirection: 'row',
   },
   subContainer: {
     justifyContent: 'center',
-    width: '30%',
+    width: '100%',
     margin: '10px',
   },
   cardContainer: {

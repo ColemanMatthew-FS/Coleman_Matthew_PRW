@@ -4,6 +4,7 @@ import { FaSearch, FaBell } from 'react-icons/fa'
 import { GiSettingsKnobs } from 'react-icons/gi'
 import MyIcons from './MyIcons'
 import ImageUrl from '../images/generic-avatar-1.jpeg'
+import { Link } from 'react-router-dom'
 
 const MyHeader = () => {
     return (
@@ -20,7 +21,7 @@ const MyHeader = () => {
             <div style={styles.right}>
                 <button style={styles.rightIcons}><FaBell/></button>
                 <button style={styles.rightIcons}><GiSettingsKnobs/></button>
-                <MyIcons IconImg={ImageUrl} ImgAlt='A generic avatar' />
+                <Link to="/SettingsDash"><MyIcons IconImg={ImageUrl} ImgAlt='A generic avatar' /></Link>
             </div>
         </header>
     )
@@ -30,6 +31,7 @@ export default MyHeader
 const styles= {
     myHeader: {
         position: 'fixed',
+        zIndex: '1',
         width: '100%',
         paddingLeft: '1%',
         paddingRight: '1%',
