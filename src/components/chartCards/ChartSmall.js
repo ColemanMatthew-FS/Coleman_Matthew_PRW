@@ -2,7 +2,8 @@ import React from 'react'
 import SmallBarChart from '../charts/SmallBarChart'
 
 //brings in the Bar chart from the state in the dashboard
-//passes it into a callback function that returns an article
+//passes it into a callback function that returns an article containing the chart
+//this article serves as a card for the chart
 //the article has an id for future reference
 const ChartSmall = ({chartSmall}) => {
     return (

@@ -1,6 +1,7 @@
 import React from 'react'
 import { LineChart, Line } from 'recharts'
 
+//Data and jsx for a line chart
 const data = [
     {
       name: 'Page A',

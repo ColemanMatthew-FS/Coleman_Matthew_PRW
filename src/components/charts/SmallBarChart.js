@@ -1,6 +1,7 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
+//dat and jsx for a bar chart
 const data = [
   {
     name: 'Year 1',

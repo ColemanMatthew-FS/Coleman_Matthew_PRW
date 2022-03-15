@@ -18,6 +18,7 @@ function App() {
         <Nav />
         
         <section style={styles.subContainer}>
+          {/* Routing for each of the pages */}
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="dashboard" element={<Dashboard />} />

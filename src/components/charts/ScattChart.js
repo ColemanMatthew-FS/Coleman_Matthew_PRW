@@ -1,6 +1,7 @@
 import React from 'react'
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 
+//data and jsx for a scatter plot
 const data = [
   { x: 100, y: 200, z: 200 },
   { x: 120, y: 100, z: 260 },
