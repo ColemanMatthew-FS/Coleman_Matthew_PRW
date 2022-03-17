@@ -3,3 +3,6 @@ This branch contains the basic layout and components that will be reused for thi
 
 # 02 Application #
 This branch contains the Create, Read, and Delete logic for the app.
+
+# 03 Routing #
+This branch contains the website routing for the app.
