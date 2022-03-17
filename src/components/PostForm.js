@@ -11,8 +11,6 @@ const PostForm = props => {
                 <MyIcons IconImg={ImageUrl} ImgAlt='A generic avatar' />
                 <input
                 name='pTitle'
-                //? value={props.pTitle}
-                value={props.gTitle}
                 style={styles.input}
                 onChange={props.getInput}
                 placeholder="Title your post"/>
@@ -20,7 +18,6 @@ const PostForm = props => {
             <div style={styles.inputContainer}>
                 <textarea
                 name='pDesc'
-                vale={props.pDesc}
                 style={styles.textArea}
                 onChange={props.getInput}
                 placeholder="What's on your mind?"/>
