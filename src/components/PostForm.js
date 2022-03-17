@@ -11,6 +11,7 @@ const PostForm = props => {
                 <MyIcons IconImg={ImageUrl} ImgAlt='A generic avatar' />
                 <input
                 name='pTitle'
+                //? value={props.pTitle}
                 value={props.gTitle}
                 style={styles.input}
                 onChange={props.getInput}
@@ -60,5 +61,5 @@ const styles= {
         alignItems: 'center',
         justifyContent: 'center',
         margin: '2%',
-    },
+    }
 }

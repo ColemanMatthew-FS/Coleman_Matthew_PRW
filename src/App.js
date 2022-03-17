@@ -25,7 +25,8 @@ class App extends Component {
     color: '#3A405A',
   }
 
-//Changes the color of part of the page's background
+//Changes the color of part of the page's background 
+//This is good.  I like how you added it to the site.  
   componentDidMount() {
   setTimeout(() => {
     this.setState({color: 'transparent'})
@@ -72,12 +73,18 @@ class App extends Component {
     let postList = this.state.pList.map((element, i) => {
       return <Post key={i} val={element} delMe={() =>this.removeItem(i)} />
     })
+
+    //Perfect you should try to do the same with the ads column.  Create an object in the state then loop through them.
+    // let adList = this.state.adList.map((element, i) => {
+    //   return <MyAd key={i} val={element} delMe={() =>this.removeItem(i)} />
+    // })
+
     return (
       <div className="App" style={styles.container}>
         {/* Header is dropped in here */}
         <MyHeader />
         {/* Flex column layout */}
-        <div style={styles.subContainer}>
+        <main style={styles.subContainer}>
           {/* The nav component on the left goes here */}
           <Nav />
           {/* The post form and post go in this div */}
@@ -91,10 +98,11 @@ class App extends Component {
           </div>
           {/* The aside for the ad cards is in here */}
           <aside>
+            {/* {adList} */}
             <MyAd ImgSrc={AppleCider} ImgAlt={'A glass of apple cider'} AdHeader={'Momma\'s Apple Cider'} AdInfo={'Fresh-squeezed, not from concentrate'}/>
             <MyAd ImgSrc={Bedding} ImgAlt={'Fresh sheets'} AdHeader={'Grab a good night\'s rest'} AdInfo={'Satin, down, wool, your choice'}/>
           </aside>
-        </div>
+        </main>
       </div>
     );
   }
@@ -111,7 +119,7 @@ const styles = {
     fontFamily: 'Source Sans Pro'
   },
   subContainer: {
-    padding: '55px 25px 10px 25px',
+    padding: '75px 25px 10px 25px',
     width: '90%',
     display: 'flex',
     flexDirection: 'row',
