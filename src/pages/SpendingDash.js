@@ -3,7 +3,7 @@ import React from 'react'
 function SpendingDash() {
     return (
         <section style={styles.container}>
-            <h1>SpendingDash</h1>
+            <h1>Spending</h1>
             <p>Some stuff here</p>
             <p>Some stuff here</p>
         </section>

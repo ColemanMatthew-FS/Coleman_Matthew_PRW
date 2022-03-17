@@ -3,7 +3,7 @@ import React from 'react'
 function IncomeDash() {
     return (
         <section style={styles.container}>
-            <h1>IncomeDash</h1>
+            <h1>Income</h1>
             <p>Some stuff here</p>
             <p>Some stuff here</p>
         </section>
