@@ -7,7 +7,7 @@ import { BsFillPiggyBankFill } from 'react-icons/bs'
 import { MdMoneyOff } from 'react-icons/md'
 
 //This is for the nav options on the left
-const Nav = props => {
+const Nav = () => {
     return (
         <nav style={styles.article}>
             <ul style={styles.list}>
