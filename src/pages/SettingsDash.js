@@ -1,11 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
+import UserForm from '../components/UserForm'
 
 function SettingsDash() {
+    const [userData] = useState([
+        
+    ])
+    componentDidMount() {
+        const loaded = this.state.isLoaded
+        if(loaded) {
+            console.log("State loaded!")
+        }
+        else {
+            console.log("State not loaded")
+        }
+    }
     return (
         <section style={styles.container}>
-            <h1>Settings</h1>
-            <p>Some stuff here</p>
-            <p>Some stuff here</p>
+            <UserForm />
         </section>
     )
 }

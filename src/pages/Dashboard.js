@@ -4,6 +4,7 @@ import ChartMed from '../components/chartCards/ChartMed'
 import ChartSmall from '../components/chartCards/ChartSmall'
 
 function Dashboard() {
+    
     //hooks for the state for each chart
     const [chartHorz] = useState([
         {chartHeader: 'Income Overview'},
