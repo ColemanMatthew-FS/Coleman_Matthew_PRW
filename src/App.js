@@ -44,15 +44,19 @@ const styles = {
     fontFamily: 'Source Sans Pro'
   },
   main: {
-    padding: '55px 25px 10px 0px',
+    padding: '55px 25px 0px 0px',
     width: '90%',
     display: 'flex',
     flexDirection: 'row',
+    
   },
   subContainer: {
-    justifyContent: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     width: '100%',
-    margin: '10px',
+    background: '#fff',
+    borderRadius: '10px',
   },
   cardContainer: {
     margin: '10px',

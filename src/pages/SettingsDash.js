@@ -1,22 +1,63 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import UserForm from '../components/UserForm'
 
 function SettingsDash() {
-    const [userData] = useState([
-        
-    ])
-    componentDidMount() {
-        const loaded = this.state.isLoaded
-        if(loaded) {
-            console.log("State loaded!")
+    /*const [profileState, updateProfile] = useState([
+        {
+            userData: [],
+            isLoaded: true
         }
-        else {
-            console.log("State not loaded")
-        }
+    ])*/
+    const [userData, updateUser] = useState([])
+    const [isLoaded, updateLoaded] = useState([{isLoaded: true}])
+    //this runs when the program first starts
+    useEffect(() => {
+        //if the program has not run, it initializes
+            const loaded = isLoaded[0].isLoaded
+            if(loaded) {
+                fetchData()
+            }
+            else {
+                console.log("State not loaded")
+            }
+        })
+    async function fetchData(){
+        await fetch('https://randomuser.me/api/')
+        .then(response => response.json())
+        .then(responseJSON => responseJSON.results.map( user =>({
+            firstName: `${user.name.first}`,
+            lastName: `${user.name.last}`,
+            street: `${user.location.street.number + ' ' + user.location.street.name}`,
+            city: `${user.location.city}`,
+            state: `${user.location.state}`,
+            postcode: `${user.location.postcode}`,
+            username: `${user.login.username}`,
+            password: `${user.login.password}`,
+            phone: `${user.phone}`,
+            picture: `${user.picture.large}`
+        })))
+        .then(data => updateUser([{
+            userData: data
+        }]))
+        .then(data => updateLoaded([{isLoaded: false}]))
+        .catch(err => console.log(err))
     }
     return (
         <section style={styles.container}>
-            <UserForm />
+            {!isLoaded[0].isLoaded ? userData[0].userData.map(user => { const {firstName, lastName, street, city, state, postcode, username, password, phone, picture} = user
+            return <UserForm 
+                    key={username}
+                    firstName={firstName}
+                    lastName={lastName}
+                    street={street}
+                    city={city}
+                    state={state}
+                    postcode={postcode}
+                    username={username}
+                    password={password}
+                    phone={phone}
+                    picture={picture}
+                    />}): console.log("Still loading")}
         </section>
     )
 }
@@ -27,7 +68,8 @@ const styles = {
     container: {
         display: 'flex',
         flexDirection: 'column',
-        height: '100vh',
+        height: '100%',
         width: '99vh',
+        alignItems: 'center'
     }
 }
