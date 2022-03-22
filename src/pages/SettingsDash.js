@@ -22,8 +22,10 @@ function SettingsDash() {
             }
         })
     async function fetchData(){
+        //fetches data from the API
         await fetch('https://randomuser.me/api/')
         .then(response => response.json())
+        //Maps our data into a new array
         .then(responseJSON => responseJSON.results.map( user =>({
             firstName: `${user.name.first}`,
             lastName: `${user.name.last}`,
@@ -36,6 +38,7 @@ function SettingsDash() {
             phone: `${user.phone}`,
             picture: `${user.picture.large}`
         })))
+        //The state is updated with that data, and will no longer run again
         .then(data => updateUser([{
             userData: data
         }]))
@@ -44,6 +47,7 @@ function SettingsDash() {
     }
     return (
         <section style={styles.container}>
+            {/* Maps our state into a new form */}
             {!isLoaded[0].isLoaded ? userData[0].userData.map(user => { const {firstName, lastName, street, city, state, postcode, username, password, phone, picture} = user
             return <UserForm 
                     key={username}

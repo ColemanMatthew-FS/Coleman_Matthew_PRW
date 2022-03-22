@@ -16,6 +16,7 @@ const styles= {
         color: 'white',
         padding: '7px',
         margin: '1%',
+        width: '100%',
         borderRadius: '10px',
         border: 'none',
         cursor: 'pointer',
