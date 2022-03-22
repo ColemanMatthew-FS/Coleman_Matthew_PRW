@@ -15,8 +15,7 @@ function App() {
     <div style={styles.container}>
       <MyHeader />
       <main style={styles.main}>
-        <Nav />
-        
+        <Nav />        
         <section style={styles.subContainer}>
           {/* Routing for each of the pages */}
           <Routes>
@@ -51,7 +50,7 @@ const styles = {
   },
   subContainer: {
     justifyContent: 'center',
-    width: '100%',
+    // width: '100%',
     margin: '10px',
   },
   cardContainer: {
