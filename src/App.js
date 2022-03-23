@@ -41,11 +41,11 @@ const styles = {
     flexDirection: 'column',
     background: '#CDCDCD',
     fontSize: '.75rem',
-    fontFamily: 'Source Sans Pro'
+    fontFamily: 'Source Sans Pro',
   },
   main: {
     padding: '55px 25px 0px 0px',
-    width: '90%',
+    width: '100%',
     display: 'flex',
     flexDirection: 'row',
     

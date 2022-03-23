@@ -2,66 +2,53 @@ import React, {useEffect, useState} from 'react'
 import UserForm from '../components/UserForm'
 
 function SettingsDash() {
-    /*const [profileState, updateProfile] = useState([
-        {
-            userData: [],
-            isLoaded: true
-        }
-    ])*/
-    const [userData, updateUser] = useState([])
-    const [isLoaded, updateLoaded] = useState([{isLoaded: true}])
+    //userData is initially null to stop the page from trying to render it while it is empty
+    const [userData, updateUser] = useState(null)
     //this runs when the program first starts
     useEffect(() => {
-        //if the program has not run, it initializes
-            const loaded = isLoaded[0].isLoaded
-            if(loaded) {
-                fetchData()
-            }
-            else {
-                console.log("State not loaded")
-            }
-        })
-    async function fetchData(){
-        //fetches data from the API
-        await fetch('https://randomuser.me/api/')
-        .then(response => response.json())
-        //Maps our data into a new array
-        .then(responseJSON => responseJSON.results.map( user =>({
-            firstName: `${user.name.first}`,
-            lastName: `${user.name.last}`,
-            street: `${user.location.street.number + ' ' + user.location.street.name}`,
-            city: `${user.location.city}`,
-            state: `${user.location.state}`,
-            postcode: `${user.location.postcode}`,
-            username: `${user.login.username}`,
-            password: `${user.login.password}`,
-            phone: `${user.phone}`,
-            picture: `${user.picture.large}`
-        })))
-        //The state is updated with that data, and will no longer run again
-        .then(data => updateUser([{
-            userData: data
-        }]))
-        .then(data => updateLoaded([{isLoaded: false}]))
-        .catch(err => console.log(err))
-    }
+        async function fetchData(){
+            //fetches data from the API
+            const response = await fetch('https://randomuser.me/api/')
+            .catch(err => console.log(err))
+            const data = await response.json()
+            //Maps our data into a new array
+            const user = data.results.map( user =>({
+                firstName: `${user.name.first}`,
+                lastName: `${user.name.last}`,
+                street: `${user.location.street.number + ' ' + user.location.street.name}`,
+                city: `${user.location.city}`,
+                state: `${user.location.state}`,
+                postcode: `${user.location.postcode}`,
+                username: `${user.login.username}`,
+                password: `${user.login.password}`,
+                phone: `${user.phone}`,
+                picture: `${user.picture.large}`
+            }))
+            //The state is updated with that data, and will no longer run again
+            updateUser([{
+                userData: user
+            }])
+        }
+        fetchData()
+        }, [])
+    
     return (
         <section style={styles.container}>
             {/* Maps our state into a new form */}
-            {!isLoaded[0].isLoaded ? userData[0].userData.map(user => { const {firstName, lastName, street, city, state, postcode, username, password, phone, picture} = user
-            return <UserForm 
-                    key={username}
-                    firstName={firstName}
-                    lastName={lastName}
-                    street={street}
-                    city={city}
-                    state={state}
-                    postcode={postcode}
-                    username={username}
-                    password={password}
-                    phone={phone}
-                    picture={picture}
-                    />}): console.log("Still loading")}
+            {/* the && operator makes sure that this code only runs when userData is not null */}
+            {userData && <UserForm 
+                    key={userData[0].userData[0].username}
+                    firstName={userData[0].userData[0].firstName}
+                    lastName={userData[0].userData[0].lastName}
+                    street={userData[0].userData[0].street}
+                    city={userData[0].userData[0].city}
+                    state={userData[0].userData[0].state}
+                    postcode={userData[0].userData[0].postcode}
+                    username={userData[0].userData[0].username}
+                    password={userData[0].userData[0].password}
+                    phone={userData[0].userData[0].phone}
+                    picture={userData[0].userData[0].picture}
+                    />}
         </section>
     )
 }
