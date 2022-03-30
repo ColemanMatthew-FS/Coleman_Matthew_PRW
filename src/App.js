@@ -16,7 +16,6 @@ function App() {
       <MyHeader />
       <main style={styles.main}>
         <Nav />
-        
         <section style={styles.subContainer}>
           {/* Routing for each of the pages */}
           <Routes>

@@ -7,7 +7,7 @@ const UserForm = props => {
         <article key={props.id} style={styles.article}>
             <h1 style={styles.header}>Edit Profile</h1>
             <Avatar AvImg={props.picture} ImgAlt='A photo of a person' />
-            <form action="">
+            <form>
                 <div style={styles.inputPair}>
                     <div style={styles.input}>
                         <label htmlFor="firstName" style={styles.label}>First Name</label>

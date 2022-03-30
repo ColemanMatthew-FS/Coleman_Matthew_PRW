@@ -11,7 +11,7 @@ function SettingsDash() {
             const response = await fetch('https://randomuser.me/api/')
             .catch(err => console.log(err))
             const data = await response.json()
-            //Maps our data into a new array
+            //Maps our data into a new array Good
             const user = data.results.map( user =>({
                 firstName: `${user.name.first}`,
                 lastName: `${user.name.last}`,
@@ -24,7 +24,7 @@ function SettingsDash() {
                 phone: `${user.phone}`,
                 picture: `${user.picture.large}`
             }))
-            //The state is updated with that data, and will no longer run again
+            //The state is updated with that data, and will no longer run again - Good work
             updateUser([{
                 userData: user
             }])
