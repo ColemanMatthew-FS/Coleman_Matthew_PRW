@@ -8,3 +8,5 @@ Programming for Web Applications C202203
 03_Routing - Routing support
 
 04_API - Random user API to load in posts
+
+To run: clone the 04_API branch, open it in VS Code, and type npm start in the terminal.
